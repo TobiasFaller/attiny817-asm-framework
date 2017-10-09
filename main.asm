@@ -189,13 +189,13 @@ _init_clock_wait_for_32kosc: ; Wait for clock to be stable
 init_io:
 	; Pin A1
 	; Clear bit 1 to config as input
-	sconf PORTA_DIRCLR, 0x00
+	sconf PORTA_DIRCLR, 0x01
 	; INVEN = 0x0 (Off), PULLUPEN = 0x0 (Off), ISC = 0x0 (INTDISABLE)
 	sconf PORTA_PIN1CTRL, 0x00
 
 	; PIN A2
 	; Set bit 2 to config as output
-	sconf PORTA_DIRSET, 0x01
+	sconf PORTA_DIRSET, 0x02
 	; INVEN = 0x0 (Off), PULLUPEN = 0x0 (Off), ISC = 0x0 (INTDISABLE)
 	sconf PORTA_PIN2CTRL, 0x00
 
